@@ -1,7 +1,7 @@
 import React, { Component, MouseEvent } from "react"
-import data from "./data/dataCanada"
-import Province from "./Province"
-import drawDetails from "./svgUtils"
+import data from "./data/dataUsCanada"
+import Province from "./StateProvince"
+import drawDetails from "./svgUtilsUsCanada"
 
 interface Props {
   onClick: (province: Provinces, event: MouseEvent) => void
@@ -26,6 +26,59 @@ export enum Provinces {
   YT = "YT",
   NT = "NT",
   NU = "NU",
+  AL = "AL",
+  AK = "AK",
+  AZ = "AZ",
+  AR = "AR",
+  CA = "CA",
+  CO = "CO",
+  CT = "CT",
+  DE = "DE",
+  FL = "FL",
+  GA = "GA",
+  HI = "HI",
+  ID = "ID",
+  IL = "IL",
+  IN = "IN",
+  IA = "IA",
+  KS = "KS",
+  KY = "KY",
+  LA = "LA",
+  ME = "ME",
+  MD = "MD",
+  MA = "MA",
+  MI = "MI",
+  MN = "MN",
+  MS = "MS",
+  MO = "MO",
+  NE = "NE",
+  NV = "NV",
+  NH = "NH",
+  NJ = "NJ",
+  NM = "NM",
+  NY = "NY",
+  NC = "NC",
+  ND = "ND",
+  OH = "OH",
+  OK = "OK",
+  OR = "OR",
+  PA = "PA",
+  RI = "RI",
+  SC = "SC",
+  SD = "SD",
+  TN = "TN",
+  TX = "TX",
+  UT = "UT",
+  VT = "VT",
+  VA = "VA",
+  WA = "WA",
+  DC = "DC",
+  WV = "WV",
+  WI = "WI",
+  WY = "WY",
+  GOV = "GOV",
+  DIP = "DIP",
+  CON = "CON",
 }
 
 export interface ProvinceCustomizations {
@@ -33,7 +86,7 @@ export interface ProvinceCustomizations {
   onHoverColor?: string
 }
 
-class Canada extends Component<Props> {
+class UsCanada extends Component<Props> {
   public static defaultProps = {
     onClick: (): void => {},
     width: 1113,
@@ -90,17 +143,16 @@ class Canada extends Component<Props> {
   render() {
     return (
       <svg
-        className="canada-map"
+        className="uscanada-map"
         xmlns="http://www.w3.org/2000/svg"
         width={this.props.width}
         height={this.props.height}
         viewBox="-24500 -15050 55700 32000"
       >
-        {drawDetails()}
         {this.buildProvinces()}
       </svg>
     )
   }
 }
 
-export default Canada
+export default UsCanada
