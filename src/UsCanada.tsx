@@ -1,7 +1,6 @@
 import React, { Component, MouseEvent } from "react"
 import data from "./data/dataUsCanada"
 import Province from "./StateProvince"
-import drawDetails from "./svgUtilsUsCanada"
 
 interface Props {
   onClick: (province: Provinces, event: MouseEvent) => void
@@ -89,10 +88,10 @@ export interface ProvinceCustomizations {
 class UsCanada extends Component<Props> {
   public static defaultProps = {
     onClick: (): void => {},
-    width: 1113,
-    height: 942,
+    width: 1203,
+    height: 1270,
     fillColor: "#D3D3D3",
-    onHoverColor: "#ffffff",
+    onHoverColor: "#333333",
     customize: {},
   }
 
@@ -147,9 +146,8 @@ class UsCanada extends Component<Props> {
         xmlns="http://www.w3.org/2000/svg"
         width={this.props.width}
         height={this.props.height}
-        viewBox="-24500 -15050 55700 32000"
+        viewBox="0 0 700.4 660"
       >
-        {drawDetails()}
         {this.buildProvinces()}
       </svg>
     )
