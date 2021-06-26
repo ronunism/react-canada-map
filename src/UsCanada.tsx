@@ -149,6 +149,7 @@ class UsCanada extends Component<Props> {
         height={this.props.height}
         viewBox="-24500 -15050 55700 32000"
       >
+        {drawDetails()}
         {this.buildProvinces()}
       </svg>
     )
