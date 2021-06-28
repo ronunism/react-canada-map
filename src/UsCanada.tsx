@@ -1,6 +1,7 @@
 import React, { Component, MouseEvent } from "react"
 import data from "./data/dataUsCanada"
 import Province from "./StateProvince"
+import drawDetails from "./svgUtilsUsCanada"
 
 interface Props {
   onClick: (province: Provinces, event: MouseEvent) => void
@@ -148,6 +149,7 @@ class UsCanada extends Component<Props> {
         height={this.props.height}
         viewBox="0 0 700.4 660"
       >
+        {drawDetails()}
         {this.buildProvinces()}
       </svg>
     )
