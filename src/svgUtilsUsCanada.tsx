@@ -3,10 +3,10 @@ import React from "react"
 export default function drawDetails() {
   return (
     <>
-    <text x="635" y="555" font-family="Arial, sans-serif" font-size="12px" fill="#333333" font-weight="bold">DC</text>
-    <text x="635" y="575" font-family="Arial, sans-serif" font-size="12px" fill="#333333" font-weight="bold">GOV</text>
-    <text x="635" y="595" font-family="Arial, sans-serif" font-size="12px" fill="#333333" font-weight="bold">DIP</text>
-    <text x="635" y="615" font-family="Arial, sans-serif" font-size="12px" fill="#333333" font-weight="bold">CON</text>
+    <text x="600" y="580" font-size="13px" fill="#333333">Washington DC</text>
+    <text x="600" y="600" font-size="13px" fill="#333333">US Government</text>
+    <text x="600" y="620" font-size="13px" fill="#333333">Diplomat</text>
+    <text x="600" y="640" font-size="13px" fill="#333333">Consul</text>
     </>
   )
 }
